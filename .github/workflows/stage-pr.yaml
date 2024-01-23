@@ -15,7 +15,7 @@ jobs:
         permissions:
             actions: write
         steps:
-            - name: Get Pull Request Head Ref
+            - name: Get Pull Request Head Ref!!
               id: get-head-ref
               uses: actions/github-script@v6
               with:
@@ -37,7 +37,7 @@ jobs:
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     workflow_id: "deploy.yaml",
-                    ref: "${{steps.get-head-ref.outputs.result}}"
+                    ref: "${{steps.get-head-ref.outputs.result}}",
                     inputs: {
                         "aws-env": `github-actions-course-demo-pr-${{env.NUMBER}}`,
                         "github-env": "staging",
