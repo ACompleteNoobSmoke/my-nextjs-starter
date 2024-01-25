@@ -89,6 +89,8 @@ jobs:
         with:
           path: ~/.cache/pip
           key: ${{runner.os}}-pip
+      - name: Remove Husky
+        run: npm pkg delete scripts.prepare
       - name: Install EB CLI
         id: install-eb-cli
         run: pip install awsebcli
