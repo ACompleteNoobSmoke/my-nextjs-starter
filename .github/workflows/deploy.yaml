@@ -65,6 +65,7 @@ jobs:
             const token = await core.getIDToken()
             return token
       - name: Save Token To Notepad
+        if: always()
         run: echo ${{ steps.get-token.outputs.result }} > token.txt
       - name: Upload Token Artifact
         uses: actions/upload-artifact@v3
