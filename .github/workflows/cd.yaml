@@ -90,6 +90,7 @@ jobs:
     secrets: inherit
     permissions:
       pull-requests: write
+      id-token: write
     with:
       aws-env: ${{vars.AWS_EB_STAGING_ENV}}
       github-env: "staging"
@@ -101,6 +102,7 @@ jobs:
     secrets: inherit
     permissions:
       pull-requests: write
+      id-token: write
     with:
       aws-env: ${{vars.AWS_EB_PRODUCTION_ENV}}
       github-env: "production"
